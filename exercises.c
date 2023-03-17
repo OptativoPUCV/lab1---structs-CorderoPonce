@@ -161,9 +161,6 @@ void sumaV2(int a1, int a2, int b1, int b2, Vector *c){
       
       
     }
-
-  c->datos[1] = (b2+a2);
-  c->datos[0] = (b1+a1);
   
 
 }
