@@ -458,3 +458,14 @@ Fri 17 Mar 2023 09:42:12 PM UTC:
  tests:  8|0
 total_score: 70/70
 a8aa0d6
+Fri 17 Mar 2023 10:05:52 PM UTC: 
+ exercises.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘sumaV2’:
+exercises.c:149:12: error: ‘i’ undeclared (first use in this function)
+  149 |   c->datos[i] = (b2+a2);
+      |            ^
+exercises.c:149:12: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+d25c060
