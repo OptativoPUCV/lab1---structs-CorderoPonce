@@ -381,3 +381,14 @@ Fri 17 Mar 2023 06:39:25 PM UTC:
  1 file changed, 2 insertions(+), 1 deletion(-)
  tests:  0|0
 0819b44
+Fri 17 Mar 2023 06:41:42 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+test.c: In function ‘crearVector’:
+exercises.c:99:12: error: ‘v’ is used uninitialized [-Werror=uninitialized]
+   99 |   v->datos = NULL;
+      |            ^
+cc1: all warnings being treated as errors
+Compilation failed
+188a5d0
