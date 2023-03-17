@@ -149,14 +149,13 @@ void sumaV2(int a1, int a2, int b1, int b2, Vector *c){
   Vector *v2 = NULL;
   v1 = crearVector(2);
   v2 = crearVector(2);
-  for (int i = 0 ; i < 2 ; i++)
-    {
-      asignarValor(v1, i, a1);
-      asignarValor(v1, i, b1);
-      asignarValor(v2, i, a2);
-      asignarValor(v2, i, b2);
+    
+  asignarValor(v1, 0, a1);
+  asignarValor(v1, 1, b1);
+  asignarValor(v2, 0, a2);
+  asignarValor(v2, 1, b2);
 
-      sumaV(v1, v2, c);
+  sumaV(v1, v2, c);
 
       
       
