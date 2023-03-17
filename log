@@ -111,3 +111,120 @@ exercises.c:87:1: error: control reaches end of non-void function [-Werror=retur
 cc1: all warnings being treated as errors
 Compilation failed
 4466c53
+Fri 17 Mar 2023 06:24:14 PM UTC: 
+ exercises.c | 9 +++++----
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+In file included from test.c:5:
+exercises.c:91:11: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before numeric constant
+   91 | Ejercicio 4.
+      |           ^~
+exercises.c:94:25: error: stray ‘`’ in program
+   94 | un vector con capacidad `n`, reserva la memoria
+      |                         ^
+exercises.c:94:27: error: stray ‘`’ in program
+   94 | un vector con capacidad `n`, reserva la memoria
+      |                           ^
+exercises.c:95:37: error: stray ‘`’ in program
+   95 | correspondiente para el arreglo con `n` datos
+      |                                     ^
+exercises.c:95:39: error: stray ‘`’ in program
+   95 | correspondiente para el arreglo con `n` datos
+      |                                       ^
+exercises.c:101:3: error: data definition has no type or storage class [-Werror]
+  101 | } Vector;
+      |   ^~~~~~
+exercises.c:101:3: error: type defaults to ‘int’ in declaration of ‘Vector’ [-Werror=implicit-int]
+exercises.c:103:1: error: unknown type name ‘Vector’
+  103 | Vector * crearVector(int n) {
+      | ^~~~~~
+exercises.c: In function ‘crearVector’:
+exercises.c:105:11: error: ‘vector’ undeclared (first use in this function); did you mean ‘Vector’?
+  105 |   Vector *vector = NULL;
+      |           ^~~~~~
+      |           Vector
+exercises.c:105:11: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:106:20: error: expected expression before ‘)’ token
+  106 |   vector = (Vector*) malloc (n * sizeof(Vector));
+      |                    ^
+exercises.c: At top level:
+exercises.c:116:19: error: expected declaration specifiers or ‘...’ before ‘Vector’
+  116 | void asignarValor(Vector * v, int i, int valor) {
+      |                   ^~~~~~
+exercises.c:127:18: error: expected declaration specifiers or ‘...’ before ‘Vector’
+  127 | int obtenerValor(Vector * v, int i) {
+      |                  ^~~~~~
+exercises.c:137:12: error: expected declaration specifiers or ‘...’ before ‘Vector’
+  137 | void sumaV(Vector * a, Vector * b, Vector * c) {
+      |            ^~~~~~
+exercises.c:137:24: error: expected declaration specifiers or ‘...’ before ‘Vector’
+  137 | void sumaV(Vector * a, Vector * b, Vector * c) {
+      |                        ^~~~~~
+exercises.c:137:36: error: expected declaration specifiers or ‘...’ before ‘Vector’
+  137 | void sumaV(Vector * a, Vector * b, Vector * c) {
+      |                                    ^~~~~~
+exercises.c:152:45: error: expected declaration specifiers or ‘...’ before ‘Vector’
+  152 | void sumaV2(int a1, int a2, int b1, int b2, Vector *c){
+      |                                             ^~~~~~
+test.c: In function ‘test_creaP’:
+test.c:112:16: error: implicit declaration of function ‘crearPersona’ [-Werror=implicit-function-declaration]
+  112 |     Persona* p=crearPersona(nombre, "15489XXX-2", edad);
+      |                ^~~~~~~~~~~~
+test.c:112:16: error: initialization of ‘Persona *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+test.c: In function ‘test_creaV’:
+test.c:140:13: error: ‘v’ undeclared (first use in this function)
+  140 |     Vector *v = crearVector(size);
+      |             ^
+test.c: In function ‘test_asignarObtenerValor’:
+test.c:164:13: error: ‘v’ undeclared (first use in this function)
+  164 |     Vector *v = (Vector*)malloc(sizeof(Vector));
+      |             ^
+test.c:164:25: error: expected expression before ‘)’ token
+  164 |     Vector *v = (Vector*)malloc(sizeof(Vector));
+      |                         ^
+test.c:167:5: error: implicit declaration of function ‘asignarValor’ [-Werror=implicit-function-declaration]
+  167 |     asignarValor(v, 0, a);
+      |     ^~~~~~~~~~~~
+test.c:171:13: error: implicit declaration of function ‘obtenerValor’ [-Werror=implicit-function-declaration]
+  171 |     int val=obtenerValor(v,0);
+      |             ^~~~~~~~~~~~
+test.c: In function ‘test_sumaV’:
+test.c:197:13: error: ‘v1’ undeclared (first use in this function); did you mean ‘y1’?
+  197 |     Vector *v1 = (Vector*)malloc(sizeof(Vector));
+      |             ^~
+      |             y1
+test.c:197:26: error: expected expression before ‘)’ token
+  197 |     Vector *v1 = (Vector*)malloc(sizeof(Vector));
+      |                          ^
+test.c:207:13: error: ‘v2’ undeclared (first use in this function)
+  207 |     Vector *v2 = (Vector*)malloc(sizeof(Vector));
+      |             ^~
+test.c:207:26: error: expected expression before ‘)’ token
+  207 |     Vector *v2 = (Vector*)malloc(sizeof(Vector));
+      |                          ^
+test.c:214:13: error: ‘v3’ undeclared (first use in this function)
+  214 |     Vector *v3 = (Vector*)malloc(sizeof(Vector));
+      |             ^~
+test.c:214:26: error: expected expression before ‘)’ token
+  214 |     Vector *v3 = (Vector*)malloc(sizeof(Vector));
+      |                          ^
+test.c:218:5: error: implicit declaration of function ‘sumaV’ [-Werror=implicit-function-declaration]
+  218 |     sumaV(v1, v2, v3);
+      |     ^~~~~
+test.c: In function ‘test_sumaV2’:
+test.c:232:13: error: ‘c’ undeclared (first use in this function)
+  232 |     Vector *c = (Vector*)malloc(sizeof(Vector));
+      |             ^
+test.c:232:25: error: expected expression before ‘)’ token
+  232 |     Vector *c = (Vector*)malloc(sizeof(Vector));
+      |                         ^
+test.c:238:5: error: implicit declaration of function ‘sumaV2’ [-Werror=implicit-function-declaration]
+  238 |     sumaV2(a1,a2,b1,b2,c);
+      |     ^~~~~~
+In file included from test.c:5:
+exercises.c: In function ‘crearVector’:
+exercises.c:109:1: error: control reaches end of non-void function [-Werror=return-type]
+  109 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+83d2234
