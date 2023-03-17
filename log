@@ -228,3 +228,14 @@ exercises.c:109:1: error: control reaches end of non-void function [-Werror=retu
 cc1: all warnings being treated as errors
 Compilation failed
 83d2234
+Fri 17 Mar 2023 06:24:37 PM UTC: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+test.c: In function ‘test_creaP’:
+test.c:112:16: error: implicit declaration of function ‘crearPersona’ [-Werror=implicit-function-declaration]
+  112 |     Persona* p=crearPersona(nombre, "15489XXX-2", edad);
+      |                ^~~~~~~~~~~~
+test.c:112:16: error: initialization of ‘Persona *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+cc1: all warnings being treated as errors
+Compilation failed
+dba123f

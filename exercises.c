@@ -85,9 +85,9 @@ Persona* crearPersona(char nombre[], char rut[], int edad) {
   return p;
 
 }
-
-
 */
+
+/*
 Ejercicio 4.
 Considerando la estructura "Vector", escriba 
 la función Vector* crearVector(int n), la cual crea 
