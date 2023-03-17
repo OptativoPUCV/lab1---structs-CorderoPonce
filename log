@@ -423,3 +423,14 @@ Fri 17 Mar 2023 08:36:58 PM UTC:
  tests:  7|1
 total_score: 60/70
 8f34d5e
+Fri 17 Mar 2023 08:54:38 PM UTC: 
+ exercises.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+In file included from test.c:5:
+exercises.c: In function ‘sumaV2’:
+exercises.c:147:24: error: ‘a’ undeclared (first use in this function)
+  147 |   for (int i = 0 ; i < a[i].capacidad ; i++)
+      |                        ^
+exercises.c:147:24: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+f69f0f8
