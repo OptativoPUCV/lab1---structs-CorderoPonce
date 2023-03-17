@@ -1,0 +1,24 @@
+Fri 17 Mar 2023 06:14:45 PM UTC: 
+ exercises.c | 51 ++++++++++++++++++++++++++++++++++++++++++++++++---
+ 1 file changed, 48 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘asignarValor’:
+exercises.c:112:16: error: invalid type argument of unary ‘*’ (have ‘int’)
+  112 |   v[i].datos = *valor;
+      |                ^~~~~~
+exercises.c:111:8: error: unused variable ‘ptrValor’ [-Werror=unused-variable]
+  111 |   int *ptrValor = &valor;
+      |        ^~~~~~~~
+exercises.c: In function ‘crearPersona’:
+exercises.c:75:3: error: ignoring return value of ‘scanf’ declared with attribute ‘warn_unused_result’ [-Werror=unused-result]
+   75 |   scanf("%29[^\n]s", p->nombre);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+exercises.c:77:3: error: ignoring return value of ‘scanf’ declared with attribute ‘warn_unused_result’ [-Werror=unused-result]
+   77 |   scanf("%10[^\n]s", p->rut);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+exercises.c:79:3: error: ignoring return value of ‘scanf’ declared with attribute ‘warn_unused_result’ [-Werror=unused-result]
+   79 |   scanf("%u", &p->edad);
+      |   ^~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+d47c372

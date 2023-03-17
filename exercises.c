@@ -13,7 +13,12 @@ Programe la función void swap(int *a, int *b), la cual
 intercambia los valores de las variables apuntadas por a y b.
 */
 void swap(int *a, int *b) {
+  
+  int temp = *b;
+    *b = *a;
+    *a = temp;
 
+    return;
 }
 
 /*
@@ -23,6 +28,27 @@ la cual encuentra el máximo y el mínimo valor del arreglo a y los
 almacena en las variables apuntadas por max y min.
 */
 void arrayMaxMin(int *a, int n, int *max, int *min) {
+
+  for (int i = 0 ; i < n ; i++)
+    {
+        if (i == 0)
+        {
+            *max = a[i];
+            *min = a[i];
+        }
+        else
+        {
+            if (a[i] > *max)
+            {
+                *max = a[i];
+            }
+
+            if (a[i] < *min)
+            {
+                *min = a[i];
+            }
+        }
+    }
     
 }
 
@@ -43,10 +69,16 @@ typedef struct {
 
 Persona* crearPersona(char nombre[], char rut[], int edad) {
    Persona * p = (Persona *) malloc(sizeof(Persona));
+
    //asignar valores de entrada a los campos de p
 
-
-   return p;
+  scanf("%29[^\n]s", p->nombre);
+  getchar();
+  scanf("%10[^\n]s", p->rut);
+  getchar();
+  scanf("%u", &p->edad);
+    
+  return p;
 }
 
 /*
@@ -63,7 +95,11 @@ typedef struct {
 } Vector;
 
 Vector * crearVector(int n) {
-   return NULL;
+
+  Vector *vector = NULL;
+  vector = (Vector*) malloc (n * sizeof(Vector));
+  vector->capacidad = n;
+  return vector;
 }
 
 /*
@@ -72,7 +108,9 @@ Programe la función void asignarValor(Vector * v, int i, int valor),
 la cual asigna el valor a la posición i del vector v.
 */
 void asignarValor(Vector * v, int i, int valor) {
-
+  int *ptrValor = &valor;
+  v[i].datos = *valor;
+  return;
 }
 
 /*
@@ -81,7 +119,8 @@ Programe la función int obtenerValor(Vector * v, int i),
 la cual retorna el valor en la posición i del vector v.
 */
 int obtenerValor(Vector * v, int i) {
-   return 0;
+  
+   return *v[i].datos;
 }
 
 /*
@@ -91,6 +130,12 @@ actualiza el vector `c` con el resultado de la suma.
 */
 void sumaV(Vector * a, Vector * b, Vector * c) {
 
+  for (int i = 0 ; i < a[i].capacidad ; i++)
+    {
+      *c[i].datos = *a[i].datos + *b[i].datos;
+    }
+
+  return;
 }
 
 /*
@@ -99,5 +144,6 @@ Use las operaciones implementadas de vectores para
 sumar (a1,a2)+(b1+b2). Almacene el resultado en el vector c.
 */
 void sumaV2(int a1, int a2, int b1, int b2, Vector *c){
+  
 
 }
