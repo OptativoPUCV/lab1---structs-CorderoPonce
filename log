@@ -56,3 +56,26 @@ exercises.c:82:3: error: ignoring return value of ‘scanf’ declared with attr
 cc1: all warnings being treated as errors
 Compilation failed
 6c8c4c8
+Fri 17 Mar 2023 06:21:23 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘crearPersona’:
+exercises.c:82:11: error: format ‘%u’ expects argument of type ‘unsigned int *’, but argument 2 has type ‘int’ [-Werror=format=]
+   82 |   scanf("%u", p->edad);
+      |          ~^   ~~~~~~~
+      |           |    |
+      |           |    int
+      |           unsigned int *
+exercises.c:76:3: error: ignoring return value of ‘scanf’ declared with attribute ‘warn_unused_result’ [-Werror=unused-result]
+   76 |   scanf("%29[^\n]s", tempnombre);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+exercises.c:79:3: error: ignoring return value of ‘scanf’ declared with attribute ‘warn_unused_result’ [-Werror=unused-result]
+   79 |   scanf("%10[^\n]s", temprut);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+exercises.c:82:3: error: ignoring return value of ‘scanf’ declared with attribute ‘warn_unused_result’ [-Werror=unused-result]
+   82 |   scanf("%u", p->edad);
+      |   ^~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+374dbe0
