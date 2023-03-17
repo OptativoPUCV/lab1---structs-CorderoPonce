@@ -349,3 +349,20 @@ exercises.c:109:1: error: control reaches end of non-void function [-Werror=retu
 cc1: all warnings being treated as errors
 Compilation failed
 a7a4c20
+Fri 17 Mar 2023 06:26:31 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘crearPersona’:
+exercises.c:77:3: error: ignoring return value of ‘scanf’ declared with attribute ‘warn_unused_result’ [-Werror=unused-result]
+   77 |   scanf("%29[^\n]s", tempnombre);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+exercises.c:80:3: error: ignoring return value of ‘scanf’ declared with attribute ‘warn_unused_result’ [-Werror=unused-result]
+   80 |   scanf("%10[^\n]s", temprut);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+exercises.c:83:3: error: ignoring return value of ‘scanf’ declared with attribute ‘warn_unused_result’ [-Werror=unused-result]
+   83 |   scanf("%u", &p->edad);
+      |   ^~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+a9a91fb
